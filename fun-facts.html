@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PMSAPTHSS Kakkove</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <script src="https://kit.fontawesome.com/3945bc0b8d.js" crossorigin="anonymous"></script>
+  <!-- Icon -->
+  <link rel="icon" href="assets/img/icon.png" type="image/logo">
+  <link rel="stylesheet" href="style">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Mar 19 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    .divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+}
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img class="img-fluid logo" src="assets/img/icon.png" alt="">
+        <!-- <h1 class="">PMSAPTHSS</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="fun-facts.html" class="active">Fun facts</a></li>
+          <li><a href="public-chats.html">Public chat</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact.html">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading bgfacts">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Fun facts</h1>
+              <p class="mb-0">
+                "Discover a Fun Fact a Day and Brighten Your Way!""</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li class="current">Fun facts</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    
+
+    <!-- Events Section -->
+     <div class="funfact">
+    <div class="container mt-5 p-5">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Refresh the browser for next fact!!</p>
+          <h2 id="fact" class="text-white"></h2>
+          <p id="fact-number"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- /Events Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="icon-footer"><img src="assets/img/icon.png" alt=""></span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>PMSAPTHSS Kakkove</p>
+            <p>Vazhayoor Malappuram Kerala 673633</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>0483-2831405</span></p>
+            <p><strong>Email:</strong> <span>pmsapthsskakkove@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/pmsapt" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/pmsapthss_kakkove/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://in.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@pmsapthssonline8273" target="_blank"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="trainers.html">Teachers</a></li>
+            <li><a href="events.html">News</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our school!</p>
+          <form action="" method="" class="">
+            <div class="newsletter-form"><input type="email" name="email"  placeholder="Enter your email here"><input type="submit" value="Subscribe"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1">PMSAPTHSS Kakkove</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Theme by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        <br>
+        <b>Developed by <a href="https://haseefmuhammed.github.io/WebCraft/" target="_blank">Web Craft</a>
+        <br>
+        Designed by <a href="https://haseef-ws.netlify.app/" target="_blank">Haseef Muhammed PC</a></b>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <script>
+    const facts = [
+  "Bananas are berries, but strawberries are not. Botanically speaking, bananas are classified as berries, while strawberries are not because their seeds are on the outside. ",
+  "A day on Venus is longer than a year on Venus. It takes Venus 243 Earth days to rotate once, but it orbits the sun in just 225 Earth days.",
+  "The Eiffel Tower can be 15 cm taller in the summer. Heat causes the metal in the structure to expand.",
+  "Honey never spoils. Archaeologists have discovered pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+  "The world’s largest desert is not the Sahara. Antarctica is technically the world’s largest desert because it receives very little precipitation.",
+  "You can’t hum while holding your nose. Try it!",
+  "Octopuses have three hearts. Two pump blood to the gills, while one pumps it to the rest of the body.",
+  "Wombat poop is cube-shaped. This unusual shape helps the poop stay in place and mark the wombat’s territory.",
+  "Hot water freezes faster than cold water. This is known as the Mpemba effect, but scientists are still trying to understand why it happens.",
+  "A jiffy is an actual unit of time. It refers to 1/100th of a second.",
+  "Scotland’s national animal is the unicorn. It’s been a symbol of purity and strength since the 12th century.",
+  "The shortest war in history lasted just 38 minutes. It was between Britain and Zanzibar on August 27, 1896.",
+  "Sloths can hold their breath longer than dolphins can. Sloths can hold their breath for up to 40 minutes, while dolphins can manage about 10.",
+  "Your heart can continue beating even when separated from your body. This is because it has its own electrical system",
+  " The Twitter bird has a name: Larry. It’s named after basketball legend Larry Bird.",
+  "A bolt of lightning contains enough energy to toast 100,000 slices of bread. Imagine the size of the toaster!",
+  "Penguins propose to their mates with a pebble. Male penguins find the smoothest pebble they can and present it to their chosen mate.",
+  "An ostrich’s eye is bigger than its brain. The large eyes help it to spot predators from a distance",
+  "The oldest known living tree is over 4,800 years old. It’s a bristlecone pine named Methuselah, located in California.",
+  "A sneeze travels out of your mouth at over 100 miles per hour. That’s why it’s important to cover your mouth when you sneeze!",
+  " The Great Wall of China is not one continuous wall. It’s a series of disconnected walls that span thousands of miles.",
+  "The shortest commercial flight in the world lasts just 57 seconds. It goes from Westray to Papa Westray in Scotland.",
+  " Koalas have fingerprints that are nearly indistinguishable from human fingerprints. This can even confuse forensic experts.",
+  "The inventor of the Rubik’s Cube couldn’t solve his own puzzle for over a month. Ernő Rubik created it in 1974.",
+  "A single strand of spaghetti can hold the weight of a baby elephant. That’s because of the strength and elasticity of pasta.",
+  "Venus flytraps can count. They can detect and remember the number of times their prey touches their sensitive hairs.",
+  "The inventor of the Pringles can is buried in one. Fred Baur requested that his ashes be placed in a Pringles can.",
+  " A group of flamingos is called a “flamboyance.”",
+  "The moon has moonquakes. Similar to earthquakes, they are caused by the gravitational pull of the Earth.",
+  "The word “oxymoron” is itself an oxymoron. It comes from the Greek words “oxy” (sharp) and “moron” (dull).",
+  "A group of porcupines is called a “prickle.”",
+  "A bolt of lightning is hotter than the surface of the sun. It can reach temperatures of up to 30,000 Kelvin.",
+  "The shortest verse in the Bible is “Jesus wept.” It consists of just two words and is found in John 11:35.",
+  "Snakes can help predict earthquakes. They can sense vibrations from up to 75 miles away.",
+  "The smell of fresh-cut grass is actually a distress signal. Plants release a chemical when they’re being cut.",
+  "A group of crows is called a “murder.”",
+  "A group of jellyfish is called a “smack.”",
+  " A cloud can weigh over 1 million pounds. They appear light and fluffy, but they’re made up of water droplets and ice.",
+  " The shortest war in history lasted just 38 minutes. It was between Britain and Zanzibar in 1896.",
+  "The longest hiccuping episode lasted 68 years. Charles Osborne started hiccuping in 1922 and stopped in 1990."
+];
+
+const randomFactIndex = Math.floor(Math.random() * facts.length);
+
+document.getElementById('fact').textContent = facts[randomFactIndex];
+document.getElementById('fact-number').textContent = `Fact #${randomFactIndex + 1} of ${facts.length}`;
+  </script>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.principal{
+    width: 40em;
+    filter:drop-shadow(10px 7px 10px black);
+}
+.bg1{
+    background-image: url("assets/img/BG\ KKV.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home-message{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 2em;
+}
+.bg-contact{
+    background-image: url("assets/img/BG\ KKV2.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.abtcnt{
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-style: normal;
+}
+.abthd{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+.bgtrainers{
+    background-image: url("assets/img/BG\ KKV3.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bgnews{
+    background-image: url("assets/img/BG\ KKV4.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bgcontact{
+    background-image: url("assets/img/BG\ KKV5.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bglogin{
+    background-image: url("assets/img/login\ bg\ kkv.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.forget{
+    cursor: pointer;
+}
+.bgfacts{
+    background-image: url("assets/img/6.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.funfact{
+    background-image: url("assets/img/bulb.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.bg-chat{
+    background-image: url("assets/img/chat.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+/* I frame */
+.iframe3{
+    width: 100%;
+    height: 100vh;
+}
+.member-content{
+    text-transform: uppercase;
+}
+.member-content span{
+    font-weight: bolder;
+}
+.bg-teacher{
+    background-color: #cabcbc7d;
+}
+.bg-tc{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+}
