@@ -1,6 +1,3 @@
-Thanks for downloading this template!
-
-Template Name: Mentor
-Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+This is the official PMSAPTHSS KAKKOVE Website 
+Developed by Haseef Muhammed PC
+Visit : https://haseef-ws.netlify.app
