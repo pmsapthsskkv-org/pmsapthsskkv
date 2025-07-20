@@ -29,8 +29,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Post styles -->
-   <link rel="stylesheet" href="post/post.css">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -76,7 +74,7 @@
           <li><a href="about.html">About us</a></li>
           <li><a href="trainers.html">Teachers</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html" class="active">News</a></li>
+          <li><a href="events.html">News</a></li>
           <li><a href="contact.html">Contact us</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -95,8 +93,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Latest News & Updates</h1>
-              <p class="mb-0">"Stay updated with the latest happenings at PMSAPTHSS Kakkove on our news page. From academic achievements to extracurricular successes, find out what's happening in our vibrant school community. Explore our news section for all the highlights and announcements."</p>
+              <h1>Welcome PMSA</h1>
+              <p class="mb-0">"Dashboard"</p>
             </div>
           </div>
         </div>
@@ -105,31 +103,67 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">News</li>
+            <li class="current">Dashboard</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="custom-marquee">
-  <p> Click the image to view it in full screen.</p>
-</div>
-
-
 
     <!-- Events Section -->
 
     <section class="mt-2 align-items-center text-center">
-      <!-- <iframe class="bg-white iframe3" src="https://pmsanews-wc.blogspot.com/" frameborder="0"></iframe> -->
-             
-      <!-- Header removed for minimal look -->
-    <div class="container">
-        <div class="posts-grid" id="posts"></div>
-    </div>
-    <div class="modal" id="imgModal">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <img class="modal-img" id="modalImg" src="" alt="Full Image" />
-    </div>
+          <section class="dashboard text-center align-items-center">
+      <h1>Dashboard</h1>
+      <a href="login.html"><button type="button" class="btn btn-danger w-50">Logout</button></a>
+
+      <section class="sheet-based">
+        <h3 class="sect-head-user">News</h3>
+        <a href="newseditorpmsa.html"><button class="btn btn-success w-50 mt-3">Upload a post <i class="bi bi-arrow-right"></i></button></a>
+        <a href="https://docs.google.com/spreadsheets/d/1azTmaDmA9v3xcFrq3Hnj7mILgFenihpqeplHe38W2lM/edit?usp=sharing" target="_blank"><button class="btn btn-secondary w-50 mt-3">Delete post <i class="bi bi-arrow-right"></i></button></a>
+      </section>
+
+      <section class="sheet-based">
+        <h3 class="sect-head-user">Graphics</h3>
+        <a href="assets/img/PMSAPTHSS Content Graphics.zip" download=""><button class="btn btn-success w-50 mt-3">Download Graphics [ZIP]<i class="bi bi-arrow-right"></i></button></a>
+        
+        <section>
+          <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/1.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/2.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/3.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/4.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/5.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/6.png" alt="">
+            </div>
+            <div class="col-md-2">
+              <img class="img-fluid" src="assets/img/PMSAPTHSS Content Graphics/7.png" alt="">
+            </div>
+          </div>
+          </div>
+        </section>
+
+      </section>
+
+        <section class="sheet-based">
+        <h3 class="sect-head-user">Support</h3>
+        <a href="https://wa.me/9074726534?text=support%20from%20PMSAPTHSS%20Kakkove%20Message-dashboard" target="_blank"><button class="btn btn-success w-50 mt-3">Get support using whatsapp <i class="bi bi-arrow-right"></i></button></a>
+        <a href="https://tebinnovations.in" target="_blank"><button class="btn btn-secondary w-50 mt-3">Get support using website <i class="bi bi-arrow-right"></i></button></a>
+      </section>
+
+    </section>
   </section>
   
 
@@ -232,9 +266,6 @@ s0.parentNode.insertBefore(s1,s0);
 
     <!-- Preload -->
     <script src="preload.js"></script>
-
-    <!-- Post js -->
-     <script src="post/post.js"></script>
 
 </body>
 

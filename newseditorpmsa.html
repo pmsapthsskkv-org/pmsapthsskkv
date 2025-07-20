@@ -28,9 +28,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Ajax for form validation -->
 
-  <!-- Post styles -->
-   <link rel="stylesheet" href="post/post.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -95,8 +96,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Latest News & Updates</h1>
-              <p class="mb-0">"Stay updated with the latest happenings at PMSAPTHSS Kakkove on our news page. From academic achievements to extracurricular successes, find out what's happening in our vibrant school community. Explore our news section for all the highlights and announcements."</p>
+              <h1>Welcome PMSA</h1>
+              <p class="mb-0">"Now you can upload the post to the website."</p>
             </div>
           </div>
         </div>
@@ -105,31 +106,108 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">News</li>
+            <li><a href="pmsadashboardtebeenohhrfr3fxxed9u.html">Dashboard</a></li>
+            <li class="current">Post Editor</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="custom-marquee">
-  <p> Click the image to view it in full screen.</p>
-</div>
-
-
 
     <!-- Events Section -->
 
     <section class="mt-2 align-items-center text-center">
-      <!-- <iframe class="bg-white iframe3" src="https://pmsanews-wc.blogspot.com/" frameborder="0"></iframe> -->
-             
-      <!-- Header removed for minimal look -->
-    <div class="container">
-        <div class="posts-grid" id="posts"></div>
+      <!-- STart dash -->
+
+      <div class="container">
+        <div class="">
+            <form action=""  id="uploadImageForm" class="php-email-form" data-aos="fade-up">
+              <div class="row gy-4">
+                <h4>Create Post</h4>
+                <div class="col-md-12">
+                  <label for="platform" class="form-label">Title</label>
+                  <input type="text" name="Title" class="form-control" placeholder="Title of post" required="">
+                </div>
+
+                <hr>
+                <h4>Upload image to cloud</h4>
+
+                <div class="alert alert-info" role="alert">
+                  <h5>Post Images</h5>
+                <a style="color: black; text-decoration: underline;" href="https://postimages.org/" target="_blank">Go to Img BB</a>
+                <p>Upload the image and copy the Thumbnail for website: (URL)</p>
+
+                <br>
+
+                <h5>Img BB</h5>
+                <a style="color: black; text-decoration: underline;" href="https://imgbb.com/" target="_blank">Go to Post Images</a>
+                <p>Upload the image and copy the HTML Full linked code (embed): (URL)</p>
+
+                <br>
+
+                <h5>Free Image Host</h5>
+                <a style="color: black; text-decoration: underline;" href="https://freeimage.host/" target="_blank">Go to Free Image Host</a>
+                <p>Upload the image and copy the HTML Thumbnail linked code (embed): (URL)</p>
+                </div>
+
+                </div>
+                <!-- Select Platform -->
+                 <div class="row mt-3">
+        <div class="col-md-6">
+      <label for="platform" class="form-label">Select Image Hosting Platform</label>
+      <select class="form-select" id="platform">
+        <option value="" disabled selected>Select one</option>
+        <option value="postimage">Post Image</option>
+        <option value="imgbb">ImgBB</option>
+        <option value="freeimagehost">Free Image Host</option>
+      </select>
     </div>
-    <div class="modal" id="imgModal">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <img class="modal-img" id="modalImg" src="" alt="Full Image" />
+
+    <!-- Embed Code Input -->
+    <div class="col-md-6">
+      <label for="embedLink" class="form-label">Paste your image embed code</label>
+      <input type="text" class="form-control" id="embedLink" placeholder="Paste embed code here">
     </div>
+
+    </div>
+
+    <!-- Go Button -->
+    <button class="btn btn-secondary mt-3 w-50" onclick="extractLink()">Upload image</button>
+
+    <!-- Output -->
+    <div class="mt-4" id="output" style="display: none;">
+      <label for="directLink" class="form-label">Direct Image Link</label>
+      <input type="text" id="directLink" name="Image_url" class="form-control text-success fw-bold"  required>
+      <p>Edit this input if you have image url (Direct)</p>
+    </div>
+  </div>
+                
+
+
+                <div class="col-md-12 mt-3">
+                  <h4>Final step</h4>
+                  <label class="mt-3" for="">Description</label>
+                  <textarea class="form-control" name="Description" rows="6" placeholder="Description of post" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+
+                  <button class="submit-btn-panal mt-5" type="submit">Upload</button>
+                </div>
+
+              </div>
+            </form>
+
+            <!-- Loading overlay -->
+<div id="formLoadingOverlay" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.8);align-items:center;justify-content:center;">
+  <div style="text-align:center;">
+    <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status"></div>
+    <div style="margin-top:16px;font-weight:600;color:#074165;">Uploading, please wait...</div>
+  </div>
+</div>
+          </div><!-- End Contact Form -->
+      </div>
+
   </section>
   
 
@@ -233,8 +311,59 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- Preload -->
     <script src="preload.js"></script>
 
-    <!-- Post js -->
-     <script src="post/post.js"></script>
+    <script>
+    function extractLink() {
+      const embedCode = document.getElementById("embedLink").value.trim();
+      const platform = document.getElementById("platform").value;
+      const directLinkField = document.getElementById("directLink");
+      const output = document.getElementById("output");
+
+      if (!platform) {
+        alert("Please select an image hosting platform.");
+        return;
+      }
+
+      if (!embedCode) {
+        alert("Please paste the embed code.");
+        return;
+      }
+
+      // Extract the image URL
+      const imgSrcMatch = embedCode.match(/<img[^>]+src=['"]([^'"]+)['"]/i);
+
+      if (imgSrcMatch && imgSrcMatch[1]) {
+        directLinkField.value = imgSrcMatch[1];
+      } else {
+        directLinkField.value = "❌ Could not extract image URL.";
+      }
+
+      output.style.display = "block";
+    }
+  </script>
+
+      <script>
+  $("#uploadImageForm").submit((e)=>{
+      e.preventDefault();
+      // Show loading overlay
+      document.getElementById('formLoadingOverlay').style.display = 'flex';
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbz89xl-RJEPHQ7B9sBBKLw40nGRwWhRR5ARB9Wobss6k2HN6SuPQ3D9jhV8R08ZOic/exec",
+          data:$("#uploadImageForm").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Post uploaded successfully");
+              window.location.reload();
+          },
+          error:function (err){
+              alert("Something Error");
+          },
+          complete: function() {
+              // Hide loading overlay after request finishes
+              document.getElementById('formLoadingOverlay').style.display = 'none';
+          }
+      })
+  })
+</script>
 
 </body>
 
