@@ -1,0 +1,38 @@
+:root {
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #37423b;
+  --accent-color: #074165;
+  --contrast-color: #ffffff;
+
+  --nav-color: #272828;
+  --nav-hover-color: #074165;
+}
+
+body {
+  font-family: var(--default-font);
+  background: var(--background-color);
+  color: var(--default-color);
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  border: none;
+}
+
+.card {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
